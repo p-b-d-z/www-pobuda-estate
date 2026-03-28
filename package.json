@@ -20,6 +20,7 @@
   "homepage": "https://github.com/p-b-d-z/www-pobuda-estate#readme",
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20260317.1",
-    "typescript": "^6.0.2"
+    "typescript": "^6.0.2",
+    "wrangler": "^4.78.0"
   }
 }
