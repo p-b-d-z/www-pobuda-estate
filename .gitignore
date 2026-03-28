@@ -1,6 +1,6 @@
 # Cloudflare
 .wrangler
-node_modules
+node_modules/*
 
 # .tfstate files
 #*.tfstate
