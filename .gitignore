@@ -1,0 +1,31 @@
+# Cloudflare
+.wrangler
+node_modules
+
+# .tfstate files
+#*.tfstate
+#*.tfstate.*
+
+# Crash log files
+crash.log
+crash.*.log
+
+# Exclude all .tfvars files, which are likely to contain sensitive data, such as
+# password, private keys, and other secrets. These should not be part of version
+# control as they are data points which are potentially sensitive and subject
+# to change depending on the environment.
+.env
+
+# Pycharm
+.idea/*
+
+# Testing
+test.sh
+
+# Virtual environment
+venv/*
+
+# AI
+AGENTS.md
+SKILLS.md
+CONTEXT.md

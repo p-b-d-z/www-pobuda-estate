@@ -1,0 +1,25 @@
+{
+  "name": "www-pobuda-estate",
+  "version": "1.0.0",
+  "description": "Deployed with Cloudflare Workers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/p-b-d-z/www-pobuda-estate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/p-b-d-z/www-pobuda-estate/issues"
+  },
+  "homepage": "https://github.com/p-b-d-z/www-pobuda-estate#readme",
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260317.1",
+    "typescript": "^6.0.2"
+  }
+}

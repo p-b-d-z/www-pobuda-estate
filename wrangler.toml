@@ -1,0 +1,9 @@
+name = "www-pobuda-estate"
+main = "src/index.ts"
+compatibility_date = "2025-03-28"
+compatibility_flags = ["nodejs_compat"]
+
+routes = [
+  { pattern = "pobuda.estate", zone_name = "pobuda.estate" },
+  { pattern = "www.pobuda.estate", zone_name = "pobuda.estate" }
+]
