@@ -1,0 +1,26 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { site } from "../data/site";
+---
+
+<BaseLayout title={`Not found — ${site.shortName}`}>
+  <main
+    id="main"
+    class="page"
+    style="min-height:100vh;display:flex;align-items:center;"
+  >
+    <div class="shell">
+      <p class="label label-primary">404</p>
+      <h1 class="display-lg" style="margin-top:1.5rem;max-width:20ch;">
+        This page is not wired up.
+      </h1>
+      <p class="body-lg" style="margin-top:1.5rem;max-width:44ch;">
+        The address you followed does not exist. The rest of the site does.
+      </p>
+      <a href="/" class="btn btn-primary" style="margin-top:2.5rem;" data-magnetic>
+        <span class="dot"></span>
+        Back to home
+      </a>
+    </div>
+  </main>
+</BaseLayout>

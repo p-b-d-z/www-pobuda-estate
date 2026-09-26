@@ -1,0 +1,35 @@
+---
+import { site } from "../data/site";
+const m = site.manifesto;
+---
+
+<section class="section" aria-labelledby="standard-heading">
+  <div class="shell">
+    <p class="label label-primary" data-reveal>{m.label}</p>
+
+    <h2
+      id="standard-heading"
+      class="display-lg"
+      data-reveal-mask
+      style="margin-top:1.5rem;max-width:26ch;"
+    >
+      <span class="line-mask"><span>Most technical work is invisible</span></span>
+      <span class="line-mask"><span>when it is done right. That is the work.</span></span>
+    </h2>
+
+    <p class="body-lg" data-reveal style="margin-top:2.25rem;max-width:54ch;">{m.body}</p>
+
+    <div class="grid sm:grid-cols-3 gap-x-10 gap-y-10" style="margin-top:4rem;">
+      {
+        m.stats.map((stat) => (
+          <div data-reveal-fast>
+            <div class="display-md" style="color:var(--color-bone);">{stat.value}</div>
+            <div class="label label-muted" style="margin-top:0.75rem;max-width:24ch;line-height:1.6;">
+              {stat.label}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

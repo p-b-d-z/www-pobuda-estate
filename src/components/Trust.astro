@@ -1,0 +1,38 @@
+---
+import { site } from "../data/site";
+const t = site.trust;
+---
+
+<section class="section" aria-labelledby="trust-heading">
+  <div class="shell grid lg:grid-cols-2 gap-14 lg:gap-20 items-start">
+    <div>
+      <p class="label label-primary" data-reveal>{t.label}</p>
+      <h2
+        id="trust-heading"
+        class="display-lg"
+        data-reveal-mask
+        style="margin-top:1.5rem;max-width:18ch;"
+      >
+        <span class="line-mask"><span>Enterprise rigor.</span></span>
+        <span class="line-mask"><span>Residential care.</span></span>
+      </h2>
+      <p class="body-lg" data-reveal style="margin-top:2rem;max-width:46ch;">{t.body}</p>
+    </div>
+
+    <!-- TODO: replace with a real client testimonial before launch. -->
+    <figure
+      data-reveal
+      style="margin:0;padding-left:clamp(1.5rem,4vw,2.5rem);border-left:1px solid var(--color-primary);"
+    >
+      <span
+        aria-hidden="true"
+        style="display:block;font-family:var(--font-display-md);font-size:3.5rem;line-height:0.4;color:var(--color-primary);"
+        >&ldquo;</span
+      >
+      <blockquote class="display-md" style="color:var(--color-bone);margin-top:1.75rem;">
+        {t.quote}
+      </blockquote>
+      <figcaption class="label label-muted" style="margin-top:1.5rem;">{t.attribution}</figcaption>
+    </figure>
+  </div>
+</section>

@@ -1,0 +1,46 @@
+---
+import { site } from "../data/site";
+const c = site.contact;
+---
+
+<section class="section" id="contact" aria-labelledby="contact-heading">
+  <div class="shell">
+    <p class="label label-primary" data-reveal>{c.label}</p>
+
+    <h2
+      id="contact-heading"
+      class="display-lg"
+      data-reveal-mask
+      style="margin-top:1.5rem;max-width:18ch;"
+    >
+      <span class="line-mask"><span>Tell us what is</span></span>
+      <span class="line-mask"><span>not working.</span></span>
+    </h2>
+
+    <p class="body-lg" data-reveal style="margin-top:2rem;max-width:48ch;">{c.body}</p>
+
+    <a
+      href={`mailto:${site.email}?subject=${encodeURIComponent("Consultation request")}`}
+      class="btn btn-primary"
+      style="margin-top:2.5rem;"
+      data-magnetic
+      data-reveal
+    >
+      <span class="dot"></span>
+      {c.cta}
+    </a>
+
+    <div style="margin-top:4rem;">
+      <a class="contact-line" href={`mailto:${site.email}`} data-reveal-fast>
+        <span class="label label-muted">Email</span>
+        <span class="contact-value display-md" style="color:var(--color-bone);">{site.email}</span>
+        <span class="arrow label label-primary" aria-hidden="true">→</span>
+      </a>
+      <a class="contact-line" href={`tel:${site.phoneHref}`} data-reveal-fast>
+        <span class="label label-muted">Telephone</span>
+        <span class="contact-value display-md" style="color:var(--color-bone);">{site.phone}</span>
+        <span class="arrow label label-primary" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</section>

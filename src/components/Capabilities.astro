@@ -1,0 +1,37 @@
+---
+import { site } from "../data/site";
+const c = site.capabilities;
+---
+
+<section class="section" id="capabilities" aria-labelledby="capabilities-heading">
+  <div class="shell">
+    <header style="max-width:56rem;">
+      <p class="label label-primary" data-reveal>{c.label}</p>
+      <h2
+        id="capabilities-heading"
+        class="display-lg"
+        data-reveal-mask
+        style="margin-top:1.5rem;max-width:20ch;"
+      >
+        <span class="line-mask"><span>Four disciplines.</span></span>
+        <span class="line-mask"><span>One standard.</span></span>
+      </h2>
+    </header>
+
+    <div style="margin-top:3.5rem;border-top:1px solid var(--color-hairline);">
+      {
+        c.items.map((item) => (
+          <article class="cap-row" data-reveal-fast>
+            <span class="tag" data-audience={item.audience}>
+              {item.audience}
+            </span>
+            <h3 class="cap-title display-md">{item.title}</h3>
+            <p class="body-md" style="max-width:52ch;">
+              {item.summary}
+            </p>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

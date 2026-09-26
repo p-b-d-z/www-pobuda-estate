@@ -1,0 +1,15 @@
+---
+// Ambient field: CSS gradient base (fallback), canvas mesh + dust. Sits below content.
+// The film layer (vignette + grain) sits above content for a photographic finish.
+// Canvas motion is progressively enhanced in src/scripts/backdrop.ts and is disabled
+// entirely under prefers-reduced-motion.
+---
+
+<div class="backdrop" aria-hidden="true">
+  <div class="ambient-fallback"></div>
+  <canvas class="backdrop-canvas" data-backdrop-canvas></canvas>
+</div>
+<div class="film" aria-hidden="true">
+  <div class="backdrop-vignette"></div>
+  <div class="backdrop-grain"></div>
+</div>

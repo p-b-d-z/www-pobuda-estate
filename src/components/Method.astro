@@ -1,0 +1,33 @@
+---
+import { site } from "../data/site";
+const m = site.method;
+---
+
+<section class="section" id="method" aria-labelledby="method-heading">
+  <div class="shell">
+    <header style="max-width:56rem;">
+      <p class="label label-primary" data-reveal>{m.label}</p>
+      <h2
+        id="method-heading"
+        class="display-lg"
+        data-reveal-mask
+        style="margin-top:1.5rem;max-width:16ch;"
+      >
+        <span class="line-mask"><span>The order matters.</span></span>
+      </h2>
+      <p class="body-lg" data-reveal style="margin-top:1.75rem;max-width:48ch;">{m.intro}</p>
+    </header>
+
+    <div class="grid sm:grid-cols-2 xl:grid-cols-4 gap-x-10 gap-y-12" style="margin-top:3.75rem;">
+      {
+        m.steps.map((step) => (
+          <div class="step" data-reveal-fast>
+            <span class="step-index">{step.index}</span>
+            <h3 class="display-md" style="color:var(--color-bone);">{step.title}</h3>
+            <p class="body-md" style="margin-top:0.75rem;">{step.detail}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

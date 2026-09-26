@@ -1,0 +1,79 @@
+---
+import { site } from "../data/site";
+---
+
+<section
+  id="top"
+  class="relative"
+  style="padding-top:clamp(8rem, 20vh, 12rem);padding-bottom:clamp(4rem, 9vh, 7rem);"
+>
+  <div class="shell">
+    <p class="label label-primary" data-hero="eyebrow">{site.hero.eyebrow}</p>
+
+    <h1 class="display-xl" data-hero="lines" style="max-width:20ch;margin-top:1.75rem;">
+      {
+        site.hero.headlineLines.map((line) => (
+          <span class="line-mask"><span>{line}</span></span>
+        ))
+      }
+    </h1>
+
+    <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-end" style="margin-top:2.75rem;">
+      <div>
+        <p class="body-lg" style="max-width:38ch;" data-hero="standfirst">
+          {site.hero.standfirst}
+        </p>
+
+        <div
+          class="flex flex-wrap items-center gap-4"
+          style="margin-top:2.75rem;"
+          data-hero="actions"
+        >
+          <a href="#contact" class="btn btn-primary" data-magnetic>
+            <span class="dot"></span>
+            {site.hero.primaryCta}
+          </a>
+          <a href="#capabilities" class="btn btn-ghost">{site.hero.secondaryCta}</a>
+        </div>
+      </div>
+
+      <!--
+        SIGNATURE — the signal split. Two audiences (business, residence) enter as
+        separate lines and merge into one firm. Drawn on load; the same idea the
+        fixed Conduit carries down the page.
+      -->
+      <figure
+        class="split"
+        data-parallax="0.05"
+        role="img"
+        aria-label="Business and residence systems converging into one firm."
+        style="margin:0;"
+      >
+        <svg viewBox="0 0 640 200" aria-hidden="true">
+          <path class="wire" pathLength="1" data-wire d="M4 52 H300 C338 52 340 100 378 100"></path>
+          <path class="wire" pathLength="1" data-wire d="M4 148 H300 C338 148 340 100 378 100"></path>
+          <path class="wire" pathLength="1" data-wire d="M378 100 H560"></path>
+          <path class="wire-faint" pathLength="1" data-wire d="M560 100 H636"></path>
+
+          <circle class="node" cx="4" cy="52" r="3.2"></circle>
+          <circle class="node" cx="4" cy="148" r="3.2"></circle>
+          <circle class="junction" cx="378" cy="100" r="4"></circle>
+          <circle class="node" cx="560" cy="100" r="5"></circle>
+        </svg>
+
+        <div class="split-labels" aria-hidden="true">
+          <span class="label split-label split-label-business" data-wire-label>Business</span>
+          <span class="label split-label split-label-residence" data-wire-label>Residence</span>
+          <span class="label split-label split-label-firm" data-wire-label>One firm</span>
+        </div>
+      </figure>
+    </div>
+
+    <div class="rule" style="margin-top:4.5rem;"></div>
+    <div class="flex flex-wrap items-center justify-between gap-x-8 gap-y-3 pt-5" data-hero="meta">
+      <span class="label label-muted">{site.location}</span>
+      <a href={`mailto:${site.email}`} class="label label-muted nav-link">{site.email}</a>
+      <a href={`tel:${site.phoneHref}`} class="label label-muted nav-link">{site.phone}</a>
+    </div>
+  </div>
+</section>

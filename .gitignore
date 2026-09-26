@@ -1,5 +1,7 @@
 # Cloudflare
 .wrangler
+.wrangler-home/
+.envrc
 node_modules/*
 
 # .tfstate files
@@ -29,3 +31,7 @@ venv/*
 AGENTS.md
 SKILLS.md
 CONTEXT.md
+
+# Astro
+.astro/
+dist/

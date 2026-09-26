@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pobuda.estate/sitemap-index.xml
